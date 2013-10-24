@@ -1,0 +1,47 @@
+extends layout
+
+block content
+    div.navbar.navbar-inverse.navbar-fixed-top
+        div.container
+            div.navbar-header
+                a(class="navbar-brand", href="#")= title
+    #inputForm.container
+        h1 Enter your website performance data
+        form(role='form')
+            .form-group
+                label(for='urlInput') URL
+                input#urlInput.form-control(type='url', placeholder='Enter URL')
+            .form-group
+                label(for='dateInput') Date
+                input#dateInput.form-control(type='date')
+            .form-group
+                label(for='responseTimeInput') Response Time
+                input#responseTimeInput.form-control(type='number', placeholder='Enter response time in seconds')
+
+            p
+            a#addData.btn.btn-success.btn-large(href='#') Add Data
+    #performanceDataTable.container
+        h1 Website performance data table
+        table.table.table-striped
+            thead
+                tr
+                    th #
+                    th URL
+                    th Date
+                    th Response Time (seconds)
+                tbody
+
+    .jumbotron
+        .container
+            #charts
+
+    script(id="dataTemplate", type ="text/template")
+        <% _.forEach( dataList , function(data) { %>
+        tr
+            td #
+            td.url <%= data.get('url') %>
+            td.date <%= data.get('date') %>
+            td.response-time <%= data.get('responseTime') %>
+            td.action
+                button(type="button" class="btn btn-info") Info Chart
+        <% }) %>

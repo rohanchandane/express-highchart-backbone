@@ -1,0 +1,25 @@
+doctype 5
+html
+    head
+        title= title
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+        link(rel='stylesheet', href='/stylesheets/bootstrap-theme.min.css')
+        link(rel='stylesheet', href='/stylesheets/style.css')
+        script(src="/javascripts/vendors/jquery.min.js")
+        script(src="/javascripts/vendors/underscore-min.js")
+        script(src="/javascripts/vendors/backbone-min.js")
+        script(src="/javascripts/vendors/bootstrap.min.js")
+
+        script(src="http://code.highcharts.com/highcharts.js")
+        script(src="http://code.highcharts.com/modules/exporting.js")
+
+        script(src="/javascripts/modules/performance/collections/Collection.TableData.js")
+        script(src="/javascripts/modules/performance/models/Model.ChartDataModel.js")
+        script(src="/javascripts/modules/performance/views/View.DataInput.js")
+        script(src="/javascripts/modules/performance/views/View.DataTable.js")
+        script(src="/javascripts/modules/performance/views/View.Chart.js")
+        script(src="/javascripts/modules/performance/app-main.js")
+
+    body
+        block content
