@@ -14,6 +14,7 @@ This application prototype uses following frameworks/libraries
 6. jQuery
 7. Highcharts
 8. Jasmine
+9. Bootstrap
 
 
 What it does?
